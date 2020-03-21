@@ -1,0 +1,5 @@
+title: Climate change data visualisations gallery
+description: A curated collection of graphics exploring themes related to climate change
+collections:
+  visualisations:
+    output: true

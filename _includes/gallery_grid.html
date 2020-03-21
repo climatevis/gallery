@@ -1,0 +1,28 @@
+{% assign num_rows = site.visualisations.size | divided_by: 3 | minus: 1 %}
+
+<div>
+    
+    <p>Click on the thumbnail to go to visualisation's page:</p>
+
+    {% for i in (0..num_rows) %}
+
+        <div class="row">
+
+        {% assign slice_start = i | times: 3 %}
+        {% assign slice_end = slice_start | plus: 3 %}
+
+        {% assign vis_slice = site.visualisations | slice: slice_start, slice_end %}
+
+        {% for vis in vis_slice %}
+        
+            <a href="{{ vis.url }}">
+            <img class="thumbnail" src="{{ vis.thumbnail_path:}}" alt="{{ vis.vis_name}}"/>
+            </a>
+
+        {% endfor %}
+
+        </div>
+        
+    {% endfor %}
+
+</div>
