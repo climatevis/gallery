@@ -15,8 +15,8 @@
 
         {% for vis in vis_slice %}
         
-            <a href="{{ vis.url }}">
-            <img class="thumbnail" src="{{ vis.thumbnail_path:}}" alt="{{ vis.vis_name}}"/>
+            <a href="{{ site.baseurl }}{{ vis.url }}">
+            <img class="thumbnail" src="{{ site.baseurl }}{{ vis.thumbnail_path}}" alt="{{ vis.vis_name}}"/>
             </a>
 
         {% endfor %}
